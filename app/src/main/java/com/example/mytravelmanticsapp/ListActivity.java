@@ -56,7 +56,7 @@ public class ListActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<Void> task) {
                                 Log.d("Logout", "User Logged Out");
                                 FirebaseUtil.attachListener();
-                                // ...
+
                             }
                         });
                 FirebaseUtil.detachListener();
@@ -84,7 +84,6 @@ public class ListActivity extends AppCompatActivity {
         FirebaseUtil.attachListener();
     }
     public void showMenu(){
-
 
         invalidateOptionsMenu();
 

@@ -120,10 +120,10 @@ public class DealActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(Uri uri) {
                             String imageUrl = uri.toString();
-//                            String pictureName = taskSnapshot.getStorage().getPath();
                             deal.setImageUrl(imageUrl);
                             showImage(imageUrl);
-//                    showImage(url);
+//                            showImage(url);
+//                            String pictureName = taskSnapshot.getStorage().getPath();
 //                            Log.d("Url: ", imageUrl);
 //                            Log.d("Name", pictureName);
                         }
