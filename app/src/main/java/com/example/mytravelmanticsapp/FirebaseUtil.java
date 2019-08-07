@@ -64,11 +64,11 @@ public class FirebaseUtil {
     }
 
     private static void signIn(){
-        // Choose authentication providers
+                    // Choose authentication providers
         List<AuthUI.IdpConfig> providers = Arrays.asList(
                 new AuthUI.IdpConfig.EmailBuilder().build(),
                 new AuthUI.IdpConfig.GoogleBuilder().build());
-// Create and launch sign-in intent
+                    // Create and launch sign-in intent
                 caller.startActivityForResult(
                 AuthUI.getInstance()
                         .createSignInIntentBuilder()
