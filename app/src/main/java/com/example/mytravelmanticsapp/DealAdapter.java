@@ -121,7 +121,7 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
             if ( url!= null && url.isEmpty()==false) {
                 Picasso.get()
                         .load(url)
-                        .resize(160, 160)
+                        .resize(180, 180)
                         .centerCrop()
                         .into(imageDeal);
 
