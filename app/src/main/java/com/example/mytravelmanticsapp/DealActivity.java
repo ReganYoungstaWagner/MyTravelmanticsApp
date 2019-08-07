@@ -65,7 +65,7 @@ public class DealActivity extends AppCompatActivity {
                 intent.setType("image/jpeg");
                 intent.putExtra(Intent.EXTRA_LOCAL_ONLY, true);
                 startActivityForResult(intent.createChooser(intent,
-                        "Insert Picture"), 42);
+                        "Insert Picture"), PICTURE_RESULT);
             }
         });
     }
@@ -122,9 +122,9 @@ public class DealActivity extends AppCompatActivity {
                             String imageUrl = uri.toString();
                             deal.setImageUrl(imageUrl);
                             showImage(imageUrl);
-//                            showImage(url);
+
 //                            String pictureName = taskSnapshot.getStorage().getPath();
-//                            Log.d("Url: ", imageUrl);
+                          // Log.d("Url: ", imageUrl);
 //                            Log.d("Name", pictureName);
                         }
                     });
@@ -186,9 +186,10 @@ public class DealActivity extends AppCompatActivity {
     }
     private void showImage(String url) {
         if (url != null && url.isEmpty() == false) {
-            Picasso.get()
+            int width = Resources.getSystem().getDisplayMetrics().widthPixels;
+                     Picasso.get()
                     .load(url)
-                    .resize(200, 200)
+                    .resize(width,width*2/3)
                     .centerCrop()
                     .into(imageView);
         }
